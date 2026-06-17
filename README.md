@@ -1,18 +1,37 @@
-Bioinformatics Learning:
-This repository contains my bioinformatics learning projects and practice work. 
+Bioinformatics Learning
 
-About Me:
-I am a Zoology graduate learning bioinformatics, Python, R, Genomics, and Data Analysis. 
-I am building this repository to organize my learning journey and showcase my progress. 
+This repository contains my bioinformatics learning projects and practice work.
 
-Topics I'm Learning:
-•Python for bioinformatics
-•R and Bioconductor
-•Genomics and Sequence analysis
-•DNA Sequencing Algorithms
-•RNA-seq Basics
-•Data Analysis
+About Me
 
-Goal:
-My goal is to bild beginner friendly bioinformatics projects and prepare for entry-level bioinformatics roles, internships, ad Research assistant positions. 
+I am a Zoology graduate learning bioinformatics, Python, R, genomics, and data analysis.
+I am building this repository to organize my learning journey and showcase my progress.
 
+Topics I am Learning
+
+- Python for bioinformatics
+- R and Bioconductor
+- Genomics and sequence analysis
+- DNA sequencing algorithms
+- RNA-seq basics
+- Data analysis
+
+Projects Added
+
+1. DNA Reverse Complement
+
+This Python script takes a DNA sequence and returns its reverse complement.
+
+File: "python-basics/dna_reverse_complement.py"
+
+Concepts practiced:
+
+- DNA base pairing
+- Reverse sequence
+- Python dictionary
+- For loop
+- Function creation
+
+Goal
+
+My goal is to build beginner-friendly bioinformatics projects and prepare for entry-level bioinformatics roles, internships, and research assistant positions.
