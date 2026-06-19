@@ -1,0 +1,14 @@
+def calculate_gc_content(dna):
+  dna = dna.upper()
+
+  g_count = dna.count("G")
+  c_count = dna.count("C")
+
+  gc_content = ((g_count + c_count)/total_bases) * 100
+  return gc_content
+
+sequence = "ATGCGCGTTAACG"
+gc_percentage = calculate_gc_content(sequence)
+
+print("DNA sequence:",sequence)
+print("GC content:",gc_percentage,"%")
