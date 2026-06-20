@@ -13,15 +13,18 @@ I am building this repository to organize my learning journey, practice coding s
 | Project | Description | Status |
 |---|---|---|
 | DNA Sequence Toolkit using Python | Beginner-friendly Python scripts for DNA sequence analysis, including reverse complement, GC content, DNA-to-RNA transcription, motif finding, and k-mer counting | Completed |
-| BLAST Mini Project | Beginner-level NCBI BLAST project for sequence similarity search and result interpretation | In progress |
+| BLAST Mini Project | NCBI BLAST project for sequence similarity search and interpretation of top database hits | Completed |
+| FASTQ Quality Analysis using Python | Python project for reading FASTQ files, counting sequencing reads, calculating read length, and estimating average quality score | Completed |
 
 ## Skills Practiced
 
 - Python programming
 - DNA sequence analysis
 - FASTA sequence handling
+- FASTQ file handling
 - NCBI BLAST
 - Sequence similarity interpretation
+- Basic sequencing quality analysis
 - Bioinformatics project documentation
 - GitHub portfolio building
 
