@@ -11,6 +11,8 @@ The aim of this project is to understand the structure of FASTQ files and calcul
 
 FASTQ files store sequencing reads along with quality scores. Quality analysis is an important first step before downstream bioinformatics workflows such as alignment, variant calling, and RNA-seq analysis.
 
+A small example FASTQ file was used for practice and demonstration purposes.
+
 ## Files Included
 
 | File | Description |
