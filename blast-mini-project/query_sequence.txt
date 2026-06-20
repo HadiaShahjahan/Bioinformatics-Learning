@@ -1,1 +1,2 @@
-# Query accession used for NCBI BLAST NM_000518.5
+# Query accession used for NCBI BLAST
+NM_000518.5
