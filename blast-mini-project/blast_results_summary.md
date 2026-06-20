@@ -16,12 +16,12 @@ The query sequence used for this project is stored in:
 
 | Result Field | Value |
 |---|---|
-| Top hit description |  |
-| Organism |  |
-| Percent identity |  |
-| Query cover |  |
-| E-value |  |
-| Accession number |   |
+| Top hit description | Homo sapiens hemoglobin subunit beta (HBB), mRNA |
+| Organism | Homo sapiens |
+| Percent identity | 100.00% |
+| Query cover | 100% |
+| E-value | 0.0 |
+| Accession number | NM_000518.5 |
 
 ## Interpretation
 
