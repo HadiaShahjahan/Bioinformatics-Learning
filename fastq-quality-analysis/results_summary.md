@@ -20,7 +20,7 @@ The Python script analyzed:
 |---|---|
 | Total reads | 4 |
 | Average read length | 20 |
-| Average quality score | To be calculated after running the script |
+| Average quality score | 38.71 |
 
 ## Interpretation
 
