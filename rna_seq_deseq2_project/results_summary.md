@@ -30,8 +30,8 @@ The R script generates the following outputs:
 
 | Metric | Value |
 |---|---|
-| Total genes tested | To be added after running the script |
-| Significant genes with adjusted p-value < 0.05 | To be added after running the script |
+| Total genes tested | 22008 |
+| Significant genes with adjusted p-value < 0.05 | 2712 |
 
 ## Interpretation
 
