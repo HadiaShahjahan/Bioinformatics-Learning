@@ -32,11 +32,30 @@ library(ggplot2)
 
 data("airway")
 
+# -------------------------------
+# 4. Export sample metadata
+# -------------------------------
+
+sample_metadata <- as.data.frame(colData(airway))
+sample_metadata$sample_id <- rownames(sample_metadata)
+
+sample_metadata <- sample_metadata[, c("sample_id", setdiff(names(sample_metadata), "sample_id"))]
+
+write.csv(
+  sample_metadata,
+  file = "sample_metadata.csv",
+  row.names = FALSE
+)
+
+# -------------------------------
+# 5. Prepare treatment metadata
+# -------------------------------
+
 # Set untreated samples as the reference condition
 airway$dex <- relevel(airway$dex, ref = "untrt")
 
 # -------------------------------
-# 4. Create DESeq2 dataset
+# 6. Create DESeq2 dataset
 # -------------------------------
 
 dds <- DESeqDataSet(airway, design = ~ dex)
@@ -45,7 +64,7 @@ dds <- DESeqDataSet(airway, design = ~ dex)
 dds <- dds[rowSums(counts(dds)) > 10, ]
 
 # -------------------------------
-# 5. Run DESeq2 analysis
+# 7. Run DESeq2 analysis
 # -------------------------------
 
 dds <- DESeq(dds)
@@ -62,7 +81,7 @@ res_df <- as.data.frame(res_ordered)
 res_df$gene_id <- rownames(res_df)
 
 # -------------------------------
-# 6. Create output folder
+# 8. Create output folder
 # -------------------------------
 
 if (!dir.exists("plots")) {
@@ -70,7 +89,7 @@ if (!dir.exists("plots")) {
 }
 
 # -------------------------------
-# 7. Export differentially expressed gene results
+# 9. Export differentially expressed gene results
 # -------------------------------
 
 write.csv(
@@ -80,7 +99,7 @@ write.csv(
 )
 
 # -------------------------------
-# 8. PCA plot
+# 10. PCA plot
 # -------------------------------
 
 vsd <- vst(dds, blind = FALSE)
@@ -98,7 +117,7 @@ pca_plot <- ggplot(pca_data, aes(PC1, PC2, color = dex)) +
 ggsave("plots/pca_plot.png", pca_plot, width = 7, height = 5)
 
 # -------------------------------
-# 9. MA plot
+# 11. MA plot
 # -------------------------------
 
 png("plots/ma_plot.png", width = 800, height = 600)
@@ -106,7 +125,7 @@ plotMA(res, main = "MA Plot: Treated vs Untreated", ylim = c(-5, 5))
 dev.off()
 
 # -------------------------------
-# 10. Volcano plot
+# 12. Volcano plot
 # -------------------------------
 
 volcano_data <- res_df
@@ -130,7 +149,7 @@ volcano_plot <- ggplot(
 ggsave("plots/volcano_plot.png", volcano_plot, width = 7, height = 5)
 
 # -------------------------------
-# 11. Print analysis summary
+# 13. Print analysis summary
 # -------------------------------
 
 significant_genes <- sum(res_df$padj < 0.05, na.rm = TRUE)
@@ -139,5 +158,6 @@ cat("RNA-seq Differential Expression Analysis Completed\n")
 cat("--------------------------------------------------\n")
 cat("Total genes tested:", nrow(res_df), "\n")
 cat("Significant genes with adjusted p-value < 0.05:", significant_genes, "\n")
+cat("Sample metadata saved to: sample_metadata.csv\n")
 cat("Results saved to: top_differentially_expressed_genes.csv\n")
 cat("Plots saved in: plots/ folder\n")
