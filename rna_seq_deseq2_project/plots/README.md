@@ -12,6 +12,16 @@ The plots help visualize sample relationships, expression changes, and statistic
 | `ma_plot.png` | MA plot showing average expression and log2 fold change |
 | `volcano_plot.png` | Volcano plot showing statistical significance and fold change |
 
+## Metadata Used in Plots
+
+The PCA plot uses the `dex` metadata column to group samples by treatment condition.
+
+| Metadata Column | Meaning |
+|---|---|
+| `dex` | Treatment condition: dexamethasone-treated or untreated |
+
+This helps show whether treated and untreated samples differ in their overall gene expression patterns.
+
 ## PCA Plot
 
 The PCA plot is used to examine overall similarity and variation among RNA-seq samples.
